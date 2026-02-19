@@ -1,158 +1,255 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>吴思 - 简历</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
-        h1, h2, h3 {
-            margin-top: 0;
-        }
-        section {
-            margin-bottom: 20px;
-        }
-        ul, ol {
-            padding-left: 20px;
-        }
-    </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>吴思 | Si Wu</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&amp;family=Noto+Serif+SC:wght@400;600&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <header>
-        <h1>吴思</h1>
-        <p>性别：男 | 民族：汉</p>
-        <p>出生年月：1996年9月</p>
-        <p>籍贯：河南省商丘市</p>
-        <p>邮箱：wusixstx@163.com</p>
-        <p>专业：控制科学与工程</p>
-    </header>
+<header class="site-header">
+<nav class="top-nav">
+<a class="nav-link" href="#about"><span data-zh="简介">About</span></a>
+<a class="nav-link" href="#research"><span data-zh="发表">Publications</span></a>
+<a class="nav-link" href="#education"><span data-zh="教育经历">Education</span></a>
+<a class="nav-link" href="#honors"><span data-zh="荣誉奖励">Honors</span></a>
+<a class="nav-link" href="#contact"><span data-zh="联系方式">Contact</span></a>
+</nav>
+<nav class="lang-nav">
+<button aria-label="中文" class="lang-btn active" data-lang="zh" type="button">中文</button>
+<span class="lang-sep">|</span>
+<button aria-label="English" class="lang-btn" data-lang="en" type="button">English</button>
+</nav>
+</header>
+<main class="content">
+<section class="intro">
+<div class="intro-header">
+<img alt="吴思" class="photo" src="images/wusi.jpg"/>
+<div class="intro-text">
+<h1 class="name">
+<span data-zh="吴思">Si Wu</span>
+</h1>
+<p class="affiliation">
+<span data-zh="博士">Ph.D.</span>, <span data-zh="流程工业综合自动化全国重点实验室">State Key Laboratory of Synthetical Automation for Process Industries</span>, <span data-zh="东北大学">Northeastern University</span>
+</p>
+<p class="tagline">
+<span data-zh="研究方向：非线性系统稳定性、安全攸关控制与约束满足">Nonlinear system stability, safety-critical control, and constraint-satisfaction-based control</span>
+</p>
+</div>
+</div>
+</section>
+<section class="section" id="about">
+<h2 class="section-title">
+<span data-zh="简介">About</span>
+</h2>
+<p class="section-body" data-zh="吴思，控制科学与工程博士，主要从事非线性系统稳定性、安全攸关控制与约束满足等方向的研究。围绕复杂约束条件下系统稳定性与安全性问题，提出了可行集重塑方法，为凸优化控制中的连续性问题提供处理方法，并在此基础上研究了面向非线性系统安全控制的小增益分析方法，围绕动态不确定性条件下的多约束鲁棒控制开展了持续研究。相关成果发表期刊与会议论文十余篇。其中，以第一作者在TAC发表论文2篇（含长文1篇、短文1篇），并在CDC、IROS、ECC等国际会议作报告。获发明专利授权多项，获张嗣瀛（CCDC）优秀青年论文奖。获IMAV 2019国际小型无人飞行器竞赛室外组冠军。">
+        I received the Ph.D. degree in Control Science and Engineering from Northeastern University in 2025, after earning the M.E. degree in Control Engineering in 2020 and the B.E. degree in Automation in 2017. My research focuses on nonlinear system stability, safety-critical control, and constraint-satisfaction-based control. Current work includes feasible set reshaping approaches for constrained control systems, continuity analysis in convex optimization-based control, and small-gain-based analytical methods for safety-critical control of nonlinear systems under dynamic uncertainties. Related results have been published in IEEE Transactions on Automatic Control (including one regular paper and one technical note) and presented at international conferences such as IEEE CDC, IROS, and ECC. I received the Zhang Siying (CCDC) Outstanding Young Paper Award and participated in the IMAV 2019 competition held in Madrid, Spain, where our team won first place in the outdoor competition.
+      </p>
+</section>
 
-    <section>
-        <h2>最高学历</h2>
-        <p>博士研究生</p>
-        <p>研究方向：运动体安全控制、非线性系统的稳定性理论及其应用</p>
-    </section>
+<section class="section" id="research">
+<h2 class="section-title">
+<span data-zh="发表">Publications</span>
+</h2>
+<h3 class="subsection-title"><span data-zh="学术专著">Monograph</span></h3>
+<ol class="pub-list">
+<li>T. Liu*, <strong>S. Wu</strong>, Z. Liu, Z. P. Jiang. <em>Robust Safety-Critical Control: Theory, Applications, and Experiments</em>. Wiley-IEEE Press, 2025. <span class="pub-venue" data-zh="（已签订出版合同，约定 2025 年 10 月 30 日交稿）">(under contract, manuscript due Oct 2025).</span></li>
+</ol>
+<h3 class="subsection-title"><span data-zh="期刊论文">Journal Papers</span></h3><ol class="pub-list"><li class="pub-item">
+<div class="pub-row">
+<div class="pub-media"><img alt="" src="images/pubs/tac2025constructive.jpg"/></div>
+<div class="pub-body">
+<div class="pub-cite"><strong>S. Wu</strong>, T. Liu*, Z. P. Jiang. “Constructive safety-critical control of nonlinear cascaded systems with multiple constraints and perturbations.” <em>IEEE Trans. Automatic Control</em>, 2025. <span class="pub-venue" data-zh="（已条件录用，待刊出）">(to appear; conditionally accepted).</span></div>
+<div class="pub-links"><a href="https://arxiv.org/abs/2406.01058" rel="noopener" target="_blank">arxiv</a></div>
+</div>
+</div>
+</li><li class="pub-item"><div class="pub-row"><div class="pub-media pub-placeholder"><img alt="" src="images/pubs/ifac2026.jpg"/></div><div class="pub-body"><div class="pub-cite"><strong>S. Wu</strong>, T. Liu*, Y. Hong, Z. P. Jiang, T. Chai. “Feasible-Set Reshaping for Constraint Qualification in Optimization-Based Control.” <em>Preprint</em>, arXiv:2512.12600, 2025.</div><div class="pub-links"><a href="https://arxiv.org/abs/2512.12600" rel="noopener" target="_blank">arxiv</a></div></div></div></li><li class="pub-item">
+<div class="pub-row">
+<div class="pub-media"><img alt="" src="images/pubs/tac2025setvalued.jpg"/></div>
+<div class="pub-body">
+<div class="pub-cite"><strong>S. Wu</strong>, T. Liu*, W. Zhang, J. Ding, Z. P. Jiang, T. Chai. “Continuous safety-critical control of mobile robots with set-valued feedback in body-fixed coordinate frame.” <em>IEEE Trans. Automatic Control</em>, 2025. <span class="pub-venue" data-zh="（已录用）">(accepted).</span></div>
+<div class="pub-links"><a href="https://doi.org/10.1109/TAC.2025.3614544" rel="noopener" target="_blank">IEEE</a></div>
+</div>
+</div>
+</li><li class="pub-item">
+<div class="pub-row">
+<div class="pub-media"><img alt="" src="images/pubs/us25.jpg"/></div>
+<div class="pub-body">
+<div class="pub-cite">T. Liu*, <strong>S. Wu</strong>, Z. Liu, Z. P. Jiang. “Safety-critical control under multiple constraints and dynamic uncertainties: A nonlinear small-gain approach.” <em>Unmanned Systems</em>, 2025. <span class="pub-venue" data-zh="（已录用）">(accepted).</span></div>
+<div class="pub-links"><a href="https://doi.org/10.1142/S2301385025440108" rel="noopener" target="_blank">World Scientific</a></div></div>
+</div>
+</li><li class="pub-item">
+<div class="pub-row">
+<div class="pub-media"><img alt="" src="images/pubs/automatica2025.jpg"/></div>
+<div class="pub-body">
+<div class="pub-cite">Z. Liu, <strong>S. Wu</strong>, T. Liu*, Z. P. Jiang. “Continuous safety-critical control of Euler–Lagrange systems subject to multiple obstacles and velocity constraints.” <em>Automatica</em>, vol. 180, Art. 112404, 2025.</div>
+<div class="pub-links"><a href="https://doi.org/10.1016/j.automatica.2025.112404" rel="noopener" target="_blank">Elsevier</a></div>
+</div>
+</div>
+</li><li class="pub-item">
+<div class="pub-row">
+<div class="pub-media"><img alt="" src="images/pubs/ce_astar.jpg"/></div>
+<div class="pub-body">
+<div class="pub-cite"><span data-zh="郭雅婷, 吴思, 徐茜, 刘腾飞*, 丁进良">Guo Yating, Wu Si, Xu Qian, Liu Tengfei*, Ding Jinliang</span>. <span class="pub-title" data-zh="「基于改进混合A*的状态受限非完整移动机器人路径规划」">“Path planning for state-constrained nonholonomic mobile robots via improved hybrid A*.”</span> <em><span data-zh="控制工程">Control Engineering</span></em>, 2025.</div>
+<div class="pub-links"><a href="https://doi.org/10.14107/j.cnki.kzgc.20240860" rel="noopener" target="_blank">CNKI</a></div>
+</div>
+</div>
+</li><li class="pub-item">
+<div class="pub-row">
+<div class="pub-media"><img alt="" src="images/pubs/tac2023.jpg"/></div>
+<div class="pub-body">
+<div class="pub-cite"><strong>S. Wu</strong>, T. Liu*, M. Egerstedt, Z. P. Jiang. “Quadratic programming for continuous control of safety-critical multiagent systems under uncertainty.” <em>IEEE Trans. Automatic Control</em>, vol. 68, no. 11, pp. 6664–6679, 2023.</div>
+<div class="pub-links"><a href="https://ieeexplore.ieee.org/document/10043732" rel="noopener" target="_blank">IEEE</a> · <a href="https://github.com/EXPSIN/Quadratic-Programming-for-Continuous-Control-of-Safety-Critical-Multi-Agent-Systems-Under-Uncertaint" rel="noopener" target="_blank">github</a></div>
+</div>
+</div>
+</li><li class="pub-item">
+<div class="pub-row">
+<div class="pub-media"><img alt="" src="images/pubs/ral2022.jpg"/></div>
+<div class="pub-body">
+<div class="pub-cite"><strong>S. Wu</strong>, T. Liu*, Q. Niu, Z. P. Jiang. “Continuous safety control of mobile robots in cluttered environments.” <em>IEEE Robotics and Automation Letters</em>, vol. 7, no. 3, pp. 8012–8019, 2022. <span class="pub-venue" data-zh="（同获 IEEE IROS 接收）">(also IEEE IROS).</span></div>
+<div class="pub-links"><a href="https://ieeexplore.ieee.org/abstract/document/9811271" rel="noopener" target="_blank">IEEE</a> · <a href="https://github.com/EXPSIN/ContinuousSafetyControl4ClutteredEnvironments" rel="noopener" target="_blank">github</a></div>
+</div>
+</div>
+</li><li class="pub-item">
+<div class="pub-row">
+<div class="pub-media"><img alt="" src="images/pubs/jssc22.jpg"/></div>
+<div class="pub-body">
+<div class="pub-cite"><strong>S. Wu</strong>, T. Liu*. “Safety control of a class of fully actuated systems subject to uncertain actuation dynamics.” <em>Journal of Systems Science &amp; Complexity</em>, vol. 35, no. 2, pp. 543–558, 2022.</div>
+<div class="pub-links"><a href="https://doi.org/10.1007/s11424-022-2093-5" rel="noopener" target="_blank">Springer</a></div></div>
+</div>
+</li><li class="pub-item">
+<div class="pub-row">
+<!-- <div class="pub-media pub-placeholder"></div> -->
+<div class="pub-body">
+<div class="pub-cite"><span data-zh="庞强, 吴思, 牛弼陛, 石瑞琦, 李文浩, 刘腾飞*">Pang Qiang, Wu Si, Niu Bibi, Shi Ruiqi, Li Wenhao, Liu Tengfei*</span>. <span class="pub-title" data-zh="「IMAV2019 室外小型无人机控制系统设计与实现」">“IMAV2019 outdoor small UAV control system design and implementation.”</span> <em><span data-zh="控制工程">Control Engineering</span></em>, 28(11): 2114–2122, 2021.</div>
+</div>
+</div>
+</li><li class="pub-item">
+<div class="pub-row">
+<!-- <div class="pub-media pub-placeholder"></div> -->
+<div class="pub-body">
+<div class="pub-cite"><span data-zh="刘晓慧, 吴思, 刘腾飞*">Liu Xiaohui, Wu Si, Liu Tengfei*</span>. <span class="pub-title" data-zh="「基于二次规划的多智能体编队安全控制」">“Safety control of multi-agent formation via quadratic programming.”</span> <em><span data-zh="控制工程">Control Engineering</span></em>. <span class="pub-venue" data-zh="（已录用）">(accepted).</span></div>
+</div>
+</div>
+</li><li class="pub-item">
+<div class="pub-row">
+<!-- <div class="pub-media pub-placeholder"></div> -->
+<div class="pub-body">
+<div class="pub-cite"><span data-zh="刘飞跃, 吴思, 刘腾飞*">Liu Feiyue, Wu Si, Liu Tengfei*</span>. <span class="pub-title" data-zh="「具有形状约束的移动机器人连续安全控制」">“Continuous safety control of mobile robots with shape constraints.”</span> <em><span data-zh="控制工程">Control Engineering</span></em>. <span class="pub-venue" data-zh="（已录用）">(accepted).</span></div>
+</div>
+</div>
+</li><li class="pub-item">
+<div class="pub-row">
+<!-- <div class="pub-media pub-placeholder"></div> -->
+<div class="pub-body">
+<div class="pub-cite"><span data-zh="姚春鹏, 吴思, 刘腾飞*">Yao Chunpeng, Wu Si, Liu Tengfei*</span>. <span class="pub-title" data-zh="「基于分层强化学习与控制障碍函数的安全控制算法」">“Safety control via hierarchical reinforcement learning and control barrier functions.”</span> <em><span data-zh="控制工程">Control Engineering</span></em>. <span class="pub-venue" data-zh="（已录用）">(accepted).</span></div>
+</div>
+</div>
+</li></ol><h3 class="subsection-title"><span data-zh="会议论文">Conference Papers</span></h3><ol class="pub-list"><li class="pub-item">
+<div class="pub-row">
+<div class="pub-media"><img alt="" src="images/pubs/cdc2025.jpg"/></div>
+<div class="pub-body">
+<div class="pub-cite"><strong>S. Wu</strong>, T. Liu*, J. Ding, Y. Li, T. Chai, Z. P. Jiang. “Safe output-feedback control for a class of linear systems with multiple output constraints.” <em>IEEE CDC</em>, 2025. <span class="pub-venue" data-zh="（已录用）">(accepted).</span></div>
+<div class="pub-links"><a href="https://doi.org/10.1109/CDC57313.2025.11312984" rel="noopener" target="_blank">IEEE</a></div>
+</div>
+</div>
+</li><li class="pub-item">
+<div class="pub-row">
+<!-- <div class="pub-media"><img alt="" src="images/pubs/ecc2025.jpg"/></div> -->
+<div class="pub-body">
+<div class="pub-cite"><strong>S. Wu</strong>, S. Wang, T. Liu*, Z. P. Jiang. “Safety-critical control of a class of underactuated systems: A case study on wheeled inverted pendulum.” <em>European Control Conference (ECC)</em>, 2025.</div>
+<div class="pub-links"><a href="https://ieeexplore.ieee.org/document/11187076" rel="noopener" target="_blank">IEEE</a></div>
+</div>
+</div>
+</li><li class="pub-item">
+<div class="pub-row">
+<!-- <div class="pub-media pub-placeholder"></div> -->
+<div class="pub-body">
+<div class="pub-cite"><strong>S. Wu</strong>, T. Liu*, Z. P. Jiang. “Safety-critical control of a class of underactuated systems: A case study on wheeled inverted pendulum.” <em>Chinese Control Conference (CCC)</em>, 2025. <span class="pub-venue" data-zh="（长摘要）">(extended abstract).</span></div>
+</div>
+</div>
+</li><li class="pub-item">
+<div class="pub-row">
+<!-- <div class="pub-media pub-placeholder"></div> -->
+<div class="pub-body">
+<div class="pub-cite"><span data-zh="徐茜, 吴思, 刘腾飞*">Xu Qian, Wu Si, Liu Tengfei*</span>. <span class="pub-title" data-zh="「基于切换的非完整移动机器人安全控制：以独轮车为例」">“Safety control of nonholonomic mobile robots via switching: case study on unicycle.”</span> <em><span data-zh="中国过程控制会议 (CPCC)">CPCC</span></em>, 2025. <span class="pub-venue" data-zh="（长摘要）">(extended abstract).</span></div>
+</div>
+</div>
+</li><li class="pub-item">
+<div class="pub-row">
+<!-- <div class="pub-media pub-placeholder"></div> -->
+<div class="pub-body">
+<div class="pub-cite">Z. Liu, <strong>S. Wu</strong>, T. Liu*. “Safety-critical control of Euler–Lagrange systems subject to position and velocity constraints.” <em>CCDC</em>, pp. 1501–1507, 2023.</div>
+</div>
+</div>
+</li><li class="pub-item">
+<div class="pub-row">
+<!-- <div class="pub-media pub-placeholder"></div> -->
+<div class="pub-body">
+<div class="pub-cite">Z. Liu, <strong>S. Wu</strong>, T. Liu*. “Safety-critical control of Euler–Lagrange systems subject to position constraints.” <em>CCC</em>, pp. 681–686, 2023.</div>
+</div>
+</div>
+</li><li class="pub-item">
+<div class="pub-row">
+<div class="pub-media"><img alt="" src="images/pubs/ral2022.jpg"/></div>
+<div class="pub-body">
+<div class="pub-cite"><strong>S. Wu</strong>, T. Liu*, Q. Niu, Z. P. Jiang. “Continuous safety control of mobile robots in cluttered environments.” <em>IEEE/RSJ IROS</em>, 2022.</div>
+<div class="pub-links"><a href="https://ieeexplore.ieee.org/abstract/document/9811271" rel="noopener" target="_blank">IEEE</a> · <a href="https://github.com/EXPSIN/ContinuousSafetyControl4ClutteredEnvironments" rel="noopener" target="_blank">github</a></div>
+</div>
+</div>
+</li></ol>
 
-    <section>
-        <h2>教育经历</h2>
-        <p>2020年9月-至今</p>
-        <p>东北大学，流程工业综合自动化全国重点实验室，控制科学与工程专业，博士研究生</p>
-        <p>导师：刘腾飞 教授</p>
-        <p>2017年9月-2020年1月</p>
-        <p>东北大学，流程工业综合自动化全国重点实验室，控制工程专业（推免），硕士研究生</p>
-        <p>导师：刘腾飞 教授</p>
-        <p>2013年9月-2017年7月</p>
-        <p>河南理工大学，电气工程及自动化学院，自动化专业（卓越工程师计划），本科</p>
-    </section>
-
-    <section>
-        <h2>学术成果与专利</h2>
-        <ol>
-            <li>S. Wu, T. Liu, M. Egerstedt, and Z.-P. Jiang, “Quadratic programming for continuous control of safety-critical multi-agent systems under uncertainty,” IEEE Transactions on Automatic Control, vol. 68, no. 11, pp. 6664–6679, 2023. （长文，控制理论两大顶级期刊之一，中科院1区，Top期刊）</li>
-            <li>S. Wu, T. Liu, Q. Niu and Z. -P. Jiang, "Continuous Safety Control of Mobile Robots in Cluttered Environments," IEEE Robotics and Automation Letters, vol. 7, no. 3, pp. 8012-8019, 2022. （同时被机器人顶会IEEE IROS接收，SCI，中科院2区，Top期刊）. （同时被机器人领域顶会IEEE IROS接收，SCI）</li>
-            <li>S. Wu, T. Liu, "Safety Control of a Class of Fully Actuated Systems Subject to Uncertain Actuation Dynamics," Journal of Systems Science & Complexity, vol.35, no.2, pp.543–558, 2022.（SCI,中科院3区）</li>
-            <li>L. Zhi, S. Wu, and T. Liu. "Safety-Critical Control of Euler-Lagrange Systems Subject to Position Constraints." 2023 42nd Chinese Control Conference (CCC). IEEE, 2023. （EI）</li>
-            <li>L. Zhi, S. Wu, and T. Liu. "Safety-critical control of euler-lagrange systems subject to position and velocity constraints." 2023 35th Chinese Control and Decision Conference (CCDC). IEEE, 2023. （EI）</li>
-            <li>庞强，吴思，牛弼陛，石瑞琦，李文浩，刘腾飞. "IMAV2019 室外小型无人机控制系统设计与实现." 控制工程 (2021). (IMAV2019国际小型无人飞行器竞赛室外组冠军，国内首次)</li>
-            <li>刘腾飞，吴思，李明黎等. 用于运动体控制实验的通信协调装置及系统[P]. 辽宁省：CN107065684B,2019-02-15.（发明专利，已授权，导师一作）</li>
-        </ol>
-    </section>
-
-    <section>
-        <h2>荣誉奖项</h2>
-        <table>
-          <colgroup>
-            <col style="width: 130px;"> <!-- 第一列的宽度为 80 像素 -->
-          </colgroup>
-          <tr>
-            <td>2024年</td>
-            <td>入选中国科协青年人才托举工程博士生专项计划</td>
-          </tr>
-          <tr>
-            <td>2023年</td>
-            <td>获得博士研究生国家奖学金</td>
-          </tr>
-          <tr>
-            <td>2023年</td>
-            <td>获得东北大学优秀研究生</td>
-          </tr>
-          <tr>
-            <td>2023年</td>
-            <td>获得中国控制与决策会议-张嗣瀛（CCDC）优秀青年论文奖</td>
-          </tr>
-          <tr>
-            <td>2019年</td>
-            <td>获得第11届国际小型无人飞行器竞赛室外组冠军</td>
-          </tr>
-          <tr>
-            <td>2017年 - 2019年</td>
-            <td>获得研究生数学建模国二等奖、国三等奖，东北大学优秀研究生，连续三年一等奖学金</td>
-          </tr>
-          <tr>
-            <td>2014年 - 2016年</td>
-            <td>获得大学生电子设计竞赛省二等奖、蓝桥杯国二等奖，连续三年奖学金</td>
-          </tr>
-        </table>
-      </section>
-      
-
-    <section>
-        <h2>科研经历</h2>
-        <table>
-        <colgroup>
-            <col style="width: 130px;"> <!-- 第一列的宽度为 80 像素 -->
-        </colgroup>
-          <tr>
-            <td>2021年至今</td>
-            <td>研究具有动态不确定性的多运动体系统安全控制（参与国家自然科学基金项目）</td>
-          </tr>
-          <tr>
-            <td>2023年至今</td>
-            <td>研究欠驱动系统安全控制问题（与腾讯RoboticsX合作）</td>
-          </tr>
-          <tr>
-            <td>2023年</td>
-            <td>以爬壁机器人为对象，研究非完整姿态受限系统的路径规划问题</td>
-          </tr>
-          <tr>
-            <td>2020年-2023年</td>
-            <td>参与xxxxxxxx项目</td>
-          </tr>
-          <tr>
-            <td>2019年</td>
-            <td>参加国际小型无人机竞赛，控制无人机编队完成搜索、包裹投递、地图构建等任务</td>
-          </tr>
-          <tr>
-            <td>2019年</td>
-            <td>随动系统的方位控制</td>
-          </tr>
-          <tr>
-            <td>2017年</td>
-            <td>基于室内定位(OptiTrack)的多旋翼轨迹跟踪</td>
-          </tr>
-          <tr>
-            <td>2017年</td>
-            <td>无位置传感器永磁同步电机控制算法</td>
-          </tr>
-          <tr>
-            <td>2017年</td>
-            <td>H桥直流变换器非线性特性及其控制研究（大学生创新创业训练计划 & 优秀本科毕业论文）</td>
-          </tr>
-          <tr>
-            <td>2016年</td>
-            <td>基于STM32的可充电型球形机器人</td>
-          </tr>
-          <tr>
-            <td>2015年</td>
-            <td>基于RS485的多机通讯系统</td>
-          </tr>
-        </table>
-      </section>      
+<h3 class="subsection-title"><span data-zh="发明专利">Patents</span></h3>
+<ol class="pub-list patent-list">
+<li><strong>吴思</strong>，刘腾飞，丁进良，柴天佑. <span class="pub-title" data-zh="「一种移动机器人安全控制集实时生成及安全滤波方法」">“Real-time safety control set generation and safety filtering for mobile robots.”</span> CN120848531B. <span class="pub-venue" data-zh="（已授权）">(granted).</span></li>
+<li>刘腾飞，潘禹扬，生远修，<strong>吴思</strong>，丁进良，谢威，张卫东. <span class="pub-title" data-zh="「一种应用于多智能体系统的分布式协同安全控制方法」">“Distributed cooperative safety control for multi-agent systems.”</span> CN120044868B. <span class="pub-venue" data-zh="（已授权）">(granted).</span></li>
+<li>刘腾飞，刘飞跃，<strong>吴思</strong>，徐茜. <span class="pub-title" data-zh="「一种基于激光点云和障碍函数的运动体鲁棒安全控制方法」">“Robust safety control of mobile systems via LiDAR and barrier functions.”</span> 2024102775094. <span class="pub-venue" data-zh="（等待实审）">(pending).</span></li>
+<li>刘腾飞，李沅武，温惠钞，<strong>吴思</strong>，等. <span class="pub-title" data-zh="「一种基于二次规划的无人机环绕控制方法」">“QP-based UAV encirclement control.”</span> 202511142764.9. <span class="pub-venue" data-zh="（已受理）">(filed).</span></li>
+<li>刘腾飞，温惠钞，李沅武，<strong>吴思</strong>，等. <span class="pub-title" data-zh="「一种基于MPC与CBF的无人机编队协同搜寻与安全控制方法」">“MPC-CBF based UAV formation search and safety control.”</span> 202511114638.2. <span class="pub-venue" data-zh="（已受理）">(filed).</span></li>
+<li>刘腾飞，温惠钞，李沅武，<strong>吴思</strong>，等. <span class="pub-title" data-zh="「一种基于视觉融合与卡尔曼滤波的无人机目标定位方法」">“Vision-KF based UAV target localization.”</span> 202511115015.7. <span class="pub-venue" data-zh="（已受理）">(filed).</span></li>
+<li>刘腾飞，<strong>吴思</strong>，李明黎，庞少阳，等. <span class="pub-title" data-zh="「用于运动体控制实验的通信协调装置及系统」">“Communication coordination device and system for motion control experiments.”</span> CN107065684B. <span class="pub-venue" data-zh="（已授权）">(filed).</span></li>
+</ol>
+</section>
+<section class="section" id="education">
+<h2 class="section-title">
+<span data-zh="教育经历">Education</span>
+</h2>
+<ul class="edu-list">
+<li><span data-zh="博士">Ph.D.</span> <span data-zh="控制科学与工程">Control Science and Engineering</span>, <span data-zh="东北大学 流程工业综合自动化全国重点实验室">Northeastern University, State Key Lab of Synthetical Automation</span>, <span data-zh="2020–2025">2020–2025</span>. <span data-zh="导师">Advisor:</span> <span data-zh="刘腾飞 教授">Prof. Tengfei Liu</span>.</li>
+<li><span data-zh="硕士">M.E.</span> <span data-zh="控制工程（推免）">Control Engineering</span>, <span data-zh="东北大学">Northeastern University</span>, <span data-zh="2017–2020">2017–2020</span>. <span data-zh="导师">Advisor:</span> <span data-zh="刘腾飞 教授">Prof. Tengfei Liu</span>.</li>
+<li><span data-zh="本科">B.E.</span> <span data-zh="自动化（卓越工程师计划）">Automation</span>, <span data-zh="河南理工大学">Henan Polytechnic University</span>, <span data-zh="2013–2017">2013–2017</span>.</li>
+</ul>
+</section>
+<section class="section" id="honors">
+<h2 class="section-title">
+<span data-zh="荣誉奖励">Honors</span>
+</h2>
+<ul class="honors-list">
+<li><span data-zh="2024 年，中国科协青年人才托举工程博士生专项计划（首批）">2024, CAST Youth Talent Support Program for PhD Students</span></li>
+<li><span data-zh="2023 年，中国控制与决策会议张嗣瀛（CCDC）优秀青年论文奖">2023, CCDC Zhang Siying Outstanding Youth Paper Award</span></li>
+<li><span data-zh="2023 年，博士研究生国家奖学金">2023, National Scholarship for Ph.D. Students</span></li>
+<li><span data-zh="2023 年，东北大学优秀研究生">2023, Outstanding Graduate Student, Northeastern University</span></li>
+<li><span data-zh="2019 年，第 11 届国际小型无人机竞赛（IMAV2019，西班牙）室外组冠军">2019, IMAV2019 (Spain) outdoor competition, first place</span></li>
+</ul>
+</section>
+<section class="section" id="contact">
+<h2 class="section-title">
+<span data-zh="联系方式">Contact</span>
+</h2>
+<p class="section-body contact">
+<span data-zh="邮箱：">Email: </span><a href="mailto:wusixstx@163.com">wusixstx@163.com</a><br/>
+<span data-zh="简历：">Resume: </span><a href="https://expsin.github.io/resume/" rel="noopener" target="_blank">expsin.github.io/resume</a><br/>
+<span data-zh="Google Scholar：">Google Scholar: </span><a href="https://scholar.google.com/citations?user=qIcA-9wAAAAJ&amp;hl=en" rel="noopener" target="_blank">Si Wu</a>
+</p>
+</section>
+</main>
+<footer class="site-footer">
+<p><span data-zh="© 吴思">© Si Wu</span></p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
-

@@ -1,0 +1,387 @@
+/* Academic-style personal homepage — bilingual, minimal */
+
+:root {
+  --text: #1a1a1a;
+  --text-muted: #4a4a4a;
+  --accent: #2c5282;
+  --bg: #fafaf8;
+  --border: #e0ddd8;
+  --font-serif-en: "Crimson Pro", Georgia, "Times New Roman", serif;
+  --font-serif-zh: "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-serif-en);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+/* Chinese content uses serif SC */
+[lang="zh"] .name,
+[lang="zh"] .section-body,
+[lang="zh"] .pub-list,
+[lang="zh"] .edu-list,
+[lang="zh"] .contact,
+[lang="zh"] .top-nav,
+[lang="zh"] .subsection-title,
+[lang="zh"] .honors-list {
+  font-family: var(--font-serif-zh);
+}
+
+/* Header: top nav (section links) + corner language */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+}
+
+.top-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+.lang-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.lang-btn {
+  font-family: inherit;
+  font-size: inherit;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.2em 0.4em;
+  border-radius: 2px;
+}
+
+.lang-btn:hover {
+  color: var(--text);
+}
+
+.lang-btn.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.lang-sep {
+  color: var(--border);
+  user-select: none;
+}
+
+/* Intro block */
+.intro {
+  margin-bottom: 2.5rem;
+}
+
+.intro-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.intro .photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .intro-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro .photo {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.name {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 0.25em;
+  letter-spacing: 0.02em;
+}
+
+.affiliation {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin: 0 0 0.35em;
+}
+
+.tagline {
+  font-style: italic;
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 2rem;
+  scroll-margin-top: 0.5rem;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin: 0 0 0.75em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.35em;
+}
+
+.subsection-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 1.25em 0 0.5em;
+}
+
+.subsection-title:first-of-type {
+  margin-top: 0.5em;
+}
+
+.honors-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1em;
+}
+
+.honors-list li {
+  margin-bottom: 0.4em;
+  padding-left: 0;
+  font-size: 0.95rem;
+}
+
+.section-body {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+/* Lists */
+.pub-list,
+.edu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ol.pub-list {
+  padding-left: 1.5em;
+}
+
+ol.pub-list li:not(.pub-item) {
+  list-style: decimal;
+}
+
+ol.pub-list .pub-item {
+  list-style: none;
+  padding-left: 2em;
+  margin-left: -1.5em;
+}
+
+.pub-list li,
+.edu-list li {
+  margin-bottom: 0.65em;
+  padding-left: 0;
+  font-size: 0.95rem;
+}
+
+.pub-title {
+  font-style: italic;
+}
+
+.pub-venue {
+  color: var(--text-muted);
+}
+
+/* Publication row with optional image & links (lqts-style) */
+.pub-item {
+  list-style: none;
+  counter-increment: pub;
+  margin-bottom: 1rem;
+}
+
+.pub-item::before {
+  content: counter(pub) ".";
+  position: absolute;
+  left: 0;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+.pub-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding-left: 0;
+  min-height: 100px;
+}
+
+.pub-media {
+  width: 160px;
+  min-width: 160px;
+  height: 100px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.pub-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pub-media.pub-placeholder {
+  background: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pub-media.pub-placeholder::after {
+  content: "";
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.pub-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.pub-cite {
+  font-size: 0.95rem;
+  margin-bottom: 0.35em;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-top: 0.35em;
+}
+
+.pub-links a {
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.pub-links a:hover {
+  text-decoration: underline;
+}
+
+/* When no image, pub-row can have no pub-media or placeholder */
+.pub-row:only-child .pub-body {
+  padding-left: 0;
+}
+
+ol.pub-list {
+  counter-reset: pub;
+}
+
+ol.pub-list .pub-item {
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .pub-row {
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .pub-media {
+    width: 100%;
+    min-width: unset;
+    height: 120px;
+  }
+}
+
+/* Contact */
+.contact a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+}
