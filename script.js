@@ -1,43 +1,37 @@
 (function () {
   'use strict';
 
-  // All page content exists in the DOM in both languages. CSS decides which
-  // one is visible, keyed off <html lang>. JS only flips that attribute, so
-  // the page stays fully readable and indexable with JavaScript disabled.
-
-  var root = document.documentElement;
-  var buttons = document.querySelectorAll('.lang-btn');
+  var langButtons = document.querySelectorAll('.lang-btn');
+  var html = document.documentElement;
 
   function setLang(lang) {
-    var isZh = lang === 'zh';
-    root.lang = isZh ? 'zh-CN' : 'en';
+    html.lang = lang === 'zh' ? 'zh' : 'en';
 
-    Array.prototype.forEach.call(buttons, function (btn) {
-      var active = btn.getAttribute('data-lang') === lang;
-      btn.classList.toggle('active', active);
-      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    document.querySelectorAll('[data-zh]').forEach(function (el) {
+      var zh = el.getAttribute('data-zh');
+      if (!el.hasAttribute('data-en')) {
+        el.setAttribute('data-en', el.textContent.trim());
+      }
+      var enText = el.getAttribute('data-en');
+      el.textContent = lang === 'zh' ? zh : (enText || el.textContent);
     });
 
-    try {
-      window.localStorage.setItem('preferred-lang', lang);
-    } catch (e) {
-      /* storage unavailable (private mode); ignore */
-    }
+    langButtons.forEach(function (btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
   }
 
-  Array.prototype.forEach.call(buttons, function (btn) {
+  langButtons.forEach(function (btn) {
     btn.addEventListener('click', function () {
       setLang(btn.getAttribute('data-lang'));
     });
   });
 
-  // Restore a previous choice; otherwise keep the default Chinese.
-  var saved = null;
-  try {
-    saved = window.localStorage.getItem('preferred-lang');
-  } catch (e) {
-    /* ignore */
-  }
+  document.querySelectorAll('[data-zh]').forEach(function (el) {
+    if (!el.hasAttribute('data-en')) {
+      el.setAttribute('data-en', el.textContent.trim());
+    }
+  });
 
-  setLang(saved === 'en' ? 'en' : 'zh');
+  setLang('zh');
 })();
