@@ -1,37 +1,43 @@
 (function () {
   'use strict';
 
-  var langButtons = document.querySelectorAll('.lang-btn');
-  var html = document.documentElement;
+  // All page content exists in the DOM in both languages. CSS decides which
+  // one is visible, keyed off <html lang>. JS only flips that attribute, so
+  // the page stays fully readable and indexable with JavaScript disabled.
+
+  var root = document.documentElement;
+  var buttons = document.querySelectorAll('.lang-btn');
 
   function setLang(lang) {
-    html.lang = lang === 'zh' ? 'zh' : 'en';
+    var isZh = lang === 'zh';
+    root.lang = isZh ? 'zh-CN' : 'en';
 
-    document.querySelectorAll('[data-zh]').forEach(function (el) {
-      var zh = el.getAttribute('data-zh');
-      if (!el.hasAttribute('data-en')) {
-        el.setAttribute('data-en', el.textContent.trim());
-      }
-      var enText = el.getAttribute('data-en');
-      el.textContent = lang === 'zh' ? zh : (enText || el.textContent);
+    Array.prototype.forEach.call(buttons, function (btn) {
+      var active = btn.getAttribute('data-lang') === lang;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
 
-    langButtons.forEach(function (btn) {
-      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
-    });
+    try {
+      window.localStorage.setItem('preferred-lang', lang);
+    } catch (e) {
+      /* storage unavailable (private mode); ignore */
+    }
   }
 
-  langButtons.forEach(function (btn) {
+  Array.prototype.forEach.call(buttons, function (btn) {
     btn.addEventListener('click', function () {
       setLang(btn.getAttribute('data-lang'));
     });
   });
 
-  document.querySelectorAll('[data-zh]').forEach(function (el) {
-    if (!el.hasAttribute('data-en')) {
-      el.setAttribute('data-en', el.textContent.trim());
-    }
-  });
+  // Restore a previous choice; otherwise keep the default Chinese.
+  var saved = null;
+  try {
+    saved = window.localStorage.getItem('preferred-lang');
+  } catch (e) {
+    /* ignore */
+  }
 
-  setLang('zh');
+  setLang(saved === 'en' ? 'en' : 'zh');
 })();

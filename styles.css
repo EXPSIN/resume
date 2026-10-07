@@ -31,15 +31,28 @@ body {
   padding: 2rem 1.25rem 3rem;
 }
 
+/* ------------------------------------------------------------------
+   Bilingual display.
+   Both languages live in the DOM as real text so search engines index
+   Chinese and English content. CSS alone decides which one is shown,
+   keyed off the lang attribute on <html>. No JS needed to be readable.
+   ------------------------------------------------------------------ */
+html[lang^="zh"] .en { display: none; }
+html:not([lang^="zh"]) .zh { display: none; }
+.zh, .en { display: inline; }
+
 /* Chinese content uses serif SC */
-[lang="zh"] .name,
-[lang="zh"] .section-body,
-[lang="zh"] .pub-list,
-[lang="zh"] .edu-list,
-[lang="zh"] .contact,
-[lang="zh"] .top-nav,
-[lang="zh"] .subsection-title,
-[lang="zh"] .honors-list {
+html[lang^="zh"] .name,
+html[lang^="zh"] .section-body,
+html[lang^="zh"] .intro,
+html[lang^="zh"] .pub-list,
+html[lang^="zh"] .edu-list,
+html[lang^="zh"] .contact,
+html[lang^="zh"] .news-list,
+html[lang^="zh"] .top-nav,
+html[lang^="zh"] .subsection-title,
+html[lang^="zh"] .honors-list,
+html[lang^="zh"] .site-footer {
   font-family: var(--font-serif-zh);
 }
 
@@ -206,6 +219,40 @@ body {
   margin: 0;
   color: var(--text);
   font-size: 0.95rem;
+}
+
+/* News list */
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-list li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  margin-bottom: 0.45em;
+  font-size: 0.95rem;
+}
+
+.news-date {
+  flex-shrink: 0;
+  min-width: 4.2em;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 480px) {
+  .news-list li {
+    display: block;
+  }
+
+  .news-date {
+    display: inline-block;
+    margin-right: 0.5em;
+  }
 }
 
 /* Lists */
